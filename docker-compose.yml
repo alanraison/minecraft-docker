@@ -1,0 +1,10 @@
+minecraft:
+  build: .
+  ports: 
+    - 25565:25565
+  volumes_from:
+    - minecraft-data
+minecraft-data:
+  image: library/java:latest
+  volumes:
+    - /mc/world
